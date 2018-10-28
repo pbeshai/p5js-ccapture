@@ -6,6 +6,8 @@ If you only need the first 15 frames, you can use p5.js' [saveFrames()](https://
 
 Read [the blog post](https://peterbeshai.com/p5js-ccapture.html) for more details.
 
+See **[index.html](https://github.com/pbeshai/p5js-ccapture/blob/master/index.html)** for the code or [view the live demo](https://peterbeshai.com/p5js-ccapture/).
+
 
 ### Create video from ffmpeg
 
