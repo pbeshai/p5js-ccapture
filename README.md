@@ -21,9 +21,11 @@ ffmpeg -r 30 -f image2 -s 540x540 -i "%07d.png" -vcodec libx264 -crf 17 -pix_fmt
 
 ### Create a GIF from ImageMagick's convert
 
-| frame delay|= 100 &times; 1 / frame rate |
-|  |= 100 / 30 |
-|  |= 3.33 |
+|   |   |
+| ---- | ----- |
+| frame delay | = 100 &times; 1 / frame rate |
+|  | = 100 / 30 |
+|  | = 3.33 |
 
 ```bash
 convert -delay 3.33 -loop 0 *.png output.gif
