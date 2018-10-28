@@ -4,7 +4,7 @@ A demonstration of how to record a [p5.js](https://p5js.org/) animation using [C
 
 If you only need the first 15 frames, you can use p5.js' [saveFrames()](https://p5js.org/reference/#/p5/saveFrames) function, but for more than that they recommend using a different library such as CCapture.js.
 
-Read [the blog post](TBD) for more details.
+Read [the blog post](https://peterbeshai.com/p5js-ccapture.html) for more details.
 
 
 ### Create video from ffmpeg
