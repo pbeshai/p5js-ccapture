@@ -8,7 +8,7 @@
   <body>
     <h1>p5.js recording with CCapture example</h1>
     <p>This page demonstrates how to record a <a href="https://p5js.org/">p5.js</a> animation using <a href="https://github.com/spite/ccapture.js">ccapture</a>.</p>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/p5.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.2.0/lib/p5.min.js"></script>
     <script src="https://unpkg.com/ccapture.js@1.1.0/build/CCapture.all.min.js"></script>
     <script>
 // the frame rate
@@ -23,14 +23,18 @@ function setup() {
 
   // this is optional, but lets us see how the animation will look in browser.
   frameRate(fps);
-
-  // start the recording
-  capturer.start();
 }
 
 // draw
 var startMillis; // needed to subtract initial millis before first draw to begin at t=0.
 function draw() {
+  if (frameCount == 1) {
+    // start the recording on the first frame
+    // this avoids the code freeze which occurs if capturer.start is called
+    // in the setup, since v0.9 of p5.js
+    capturer.start();
+  }
+
   if (startMillis == null) {
     startMillis = millis();
   }
