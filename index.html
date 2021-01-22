@@ -28,7 +28,7 @@ function setup() {
 // draw
 var startMillis; // needed to subtract initial millis before first draw to begin at t=0.
 function draw() {
-  if (frameCount == 1) {
+  if (frameCount === 1) {
     // start the recording on the first frame
     // this avoids the code freeze which occurs if capturer.start is called
     // in the setup, since v0.9 of p5.js
